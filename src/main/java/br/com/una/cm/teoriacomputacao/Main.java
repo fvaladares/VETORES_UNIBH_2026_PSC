@@ -14,6 +14,11 @@ public class Main {
              i--) {
             System.out.println(notas[i]);
         }
+        /*
+        Início do processdo de transferência de dados
+        do vertor notas para o vetor notras2
+        em ordem reversa
+         */
         for (int i = (notas.length - 1);
              i >= 0;
              i--) {
@@ -21,6 +26,13 @@ public class Main {
             j++;
         }
         printArray(notas2);
+
+         /*
+            Início do processdo de transferência de dados
+            do vertor notas para o vetor notras2
+            em ordem reversa
+            Usando menos variáveis
+         */
         notas2 = new int[notas.length];
         for (int i = 0; i < notas.length; i++) {
             notas2[notas.length - (i + 1)] = notas[i];
@@ -28,12 +40,12 @@ public class Main {
         printArray(notas2);
     }
 
-    public static void printArray(int[] vetor) {
+    public static void printArray(int[] dados) {
         System.out.println("Iniciando impressão:");
 
         // for each or enhanced for.
-        for (int j : vetor) {
-            System.out.println(j);
+        for (int elemento : dados) {
+            System.out.println(elemento);
         }
     }
 }
